@@ -1,5 +1,53 @@
-$corDeFundo: crimson;
+@use 'hero';
+@use 'playlists';
+@use 'header';
+
+$corDeFundo: #eaeaea;
+$corTexto: #fff;
+$fontSize: 16px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", Arial, sans-serif;
+    color: $corTexto;
+
+}
 
 body {
     background-color: $corDeFundo;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    // line-height: 1;
+    color: $corTexto;
+}
+
+@mixin title($fontSize: 24px){
+    @include text($fontSize);
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.text {
+    @include text;
+}
+
+.text-small {
+    @include text(14px);
+}
+
+.title {
+    @include title(24px);
+}
+
+.title-small {
+    @include title($fontSize: 16px);
 }
