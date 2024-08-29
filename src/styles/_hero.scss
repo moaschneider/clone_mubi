@@ -12,63 +12,108 @@
         position: absolute;
         inset: auto 0 0 0;
         height: 50%;
-        background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.8) 100%);
+        background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.8) 100%);
         z-index: 0;            
+    
     }
 
+    &__gradiente2 {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 25%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+        z-index: 0;            
+    }
+    
     &__layout {
         max-width: 792px;
         width: 100%;
         height: 100%;
         margin-right: auto;
         margin-left: auto;
-        padding: 95px 22px 0 22px;
+        padding: 0 22px 0 22px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         z-index: 1;
     }
     
-    &__top {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
-        &__ratings {
-            display: flex;
-            flex-direction: column;
-            
-            &__rating {
+        &__top {
+
+            &__header {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                height: 60px;
+
+                &__nav {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &__hamburguer {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &__logo {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &__bullet {
+                        display: flex;
+                        align-items: center;
+                        height: 12px;
+                        width: 12px;
+                        background-color: rgb(200, 200, 200);
+                        border-radius: 50%;
+                    }
+                }
+                
+            }
+
+
+            &__down {
                 display: flex;
                 flex-direction: row;
-                align-items: baseline;
-                font-weight: bold;
+                justify-content: space-between;
+                padding-top: 35px;
+    
+                &__ratings {
+                    display: flex;
+                    flex-direction: column;
+    
+                    &__rating {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: baseline;
+                        font-weight: bold;
+    
+                        &__value {
+                            line-height: 24px;
+                            margin-left: 7px;
+                        }
+    
+                        &__scale {
+                            letter-spacing: 1px;
+                            opacity: 0.5;
+                            margin-left: 2px;
+                        }
+                    }
 
-                &__value {
-                    line-height: 24px;
-                    margin-left: 7px;
+                    &__reviews {
+                        opacity: 0.5;
+                        margin: 1px 0 0 27px;
+                        letter-spacing: 0px;
+                    }
                 }
-
-                &__scale {
-                    letter-spacing: 1px;
-                    opacity: 0.5;
-                    margin-left: 2px;
-                }
-
             }
-        
-            &__reviews {
-                opacity: 0.5;
-                margin: 1px 0 0 27px;
-                letter-spacing: 0px;
-            }
-            
-            }
-            
         }
     
     &__bottom {
-        padding: 0 0 64px 0;
+        padding: 0 0 30px 0;
 
         &__title {
             display: inline-block;
@@ -139,6 +184,43 @@
                 }
             }
         }
+
+        &__footer {
+            height: 24px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            position: relative;
+
+            &__arrow {
+                transform: rotate(270deg);
+                width: 45px;
+                height: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.5;
+
+                svg {
+                    width: 11px;
+                }
+            }
+
+            &__share {
+                display: flex;
+                align-items: baseline;
+                position: absolute;
+                right: 0;
+                display: flex;
+
+                &__text {
+                    margin-right: 5px;
+                }
+            }
+        }
+    
+
 
     }
     
