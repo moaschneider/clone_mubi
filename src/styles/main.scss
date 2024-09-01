@@ -1,6 +1,8 @@
 @use 'hero';
 @use 'playlists';
 @use 'header';
+@use 'collections';
+@use 'awards';
 
 $corDeFundo: #eaeaea;
 $corTexto: #fff;
@@ -19,13 +21,20 @@ body {
     background-color: $corDeFundo;
 }
 
+ul {
+    list-style: none;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
 .border {
     border: 1px solid blue;
 }
 
 @mixin text($fontSize: 16px){
     font-size: $fontSize;
-    // line-height: 1;
     color: $corTexto;
 }
 

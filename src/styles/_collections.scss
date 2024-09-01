@@ -1,0 +1,44 @@
+.collections {
+    padding: 43px 22px 0;
+    max-width: 792px;
+    width: 100%;
+    margin: 0 auto;
+    
+    &__title {
+        margin-bottom: 20px;
+        
+        .title-small {
+            font-size: 18px;
+            color: #666;    
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        
+        &__item {
+            margin-right: 6px;
+            margin-bottom: 36px;
+            width: 368px;
+            height: 78px;
+            display: flex;
+            background-color: white;
+            
+            &__image {
+                img {
+                    width: 94px;
+                    height: 100%;
+                }
+            }
+
+            &__title {
+                padding: 12px 15px;
+
+                .title-small {
+                    color: #323232;
+                }
+            }
+        }
+    }
+}
