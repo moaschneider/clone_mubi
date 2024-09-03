@@ -1,16 +1,7 @@
 .collections {
-    padding: 43px 22px 0;
-    max-width: 792px;
-    width: 100%;
-    margin: 0 auto;
     
     &__title {
         margin-bottom: 20px;
-        
-        .title-small {
-            font-size: 18px;
-            color: #666;    
-        }
     }
 
     &__cards {

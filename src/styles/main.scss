@@ -3,6 +3,8 @@
 @use 'header';
 @use 'collections';
 @use 'awards';
+@use 'cast';
+@use 'reviews';
 
 $corDeFundo: #eaeaea;
 $corTexto: #fff;
@@ -14,11 +16,19 @@ $fontSize: 16px;
     padding: 0;
     font-family: "DM Sans", Arial, sans-serif;
     color: $corTexto;
-
 }
 
 body {
     background-color: $corDeFundo;
+}
+
+.margin {
+    max-width: 792px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 43px 22px 34px 22px;
+    // border: 1px solid blue;
+    
 }
 
 ul {
@@ -38,11 +48,12 @@ ul {
     color: $corTexto;
 }
 
-@mixin title($fontSize: 24px){
+@mixin title($fontSize: 18px){
     @include text($fontSize);
     text-transform: uppercase;
     line-height: 1;
-    font-weight: 700;
+    font-weight: bold;
+    color: #666;
 }
 
 .text {
@@ -54,7 +65,7 @@ ul {
 }
 
 .title {
-    @include title(24px);
+    @include title;
 }
 
 .title-small {
