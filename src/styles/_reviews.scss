@@ -1,6 +1,5 @@
 .reviews {
     background-color: white;
-    height: 200vh;
 
     &__title {
         margin-bottom: 30px;
@@ -105,19 +104,78 @@
 
     &__grid {
 
-        &__title {
+        &__header {
             display: flex;
-            align-items: flex-end;
-            // border: 1px solid red;
+            justify-content: space-between;
+            margin-bottom: 30px;
             
             &__title {
-                margin-right: 15px;    
+                display: flex;
+                align-items: flex-end;
+                
+                &__stars {
+                    margin-left: 15px;    
+                    display: flex;
+                }
+            }
+            
+            .text-small {
+                color: #001489;
+                font-weight: bold;
+                font-style: 12px;
+            }
+        }
+        
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            // border: 1px solid red;
+
+            .text {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 17px;
+                color: #323232;
+                line-height: 26px;
             }
 
-            &__stars {
-                display: flex;
-                align-items: baseline;
+            &__card {
+
+                img {
+                    display: block;
+                    margin: 0 auto 40px auto;
+                    height: 45px;
+                }
+
+                &__footer {
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    border-top: 3px solid black;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .title {
+                        color: #323232;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+
+                    .text {
+                        font-family: "DM Sans", Arial, sans-serif;
+                        font-size: 14px;
+                        color: #9b9b9b;
+                    }
+
+                    .text-small {
+                        color: #323232;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                }
+
             }
+
+
         }
         
     }

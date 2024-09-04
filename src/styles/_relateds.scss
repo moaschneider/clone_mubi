@@ -1,0 +1,135 @@
+.related-movies {
+    height: 200vh;
+
+    &__header {
+        margin-bottom: 20px;
+    }
+
+    &__card {
+        background-color: white;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        
+        .image {
+            width: 50%;
+            height: 100%;
+            background-image: url("https://images.mubicdn.net/images/film/38810/cache-47218-1672936667/image-w1280.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            .title {
+                font-size: 27px;
+                color: white;
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+
+            .title-small {
+                font-weight: normal;
+                font-size: 15px;
+                color: white;
+            }
+
+            .bold {
+                font-weight: bold;
+                padding-left: 20px;
+            }
+        }
+
+        .texts {
+            width: 50%;
+            padding: 20px;
+
+            .text-small {
+                font-size: 13px;
+                color: #323232;
+                margin-bottom: 13px;
+                line-height: 19px;
+            }
+
+            .buttons {
+                height: 38px;
+                display: flex;
+                align-items: center;
+                gap: 13px;
+                // border: 1px solid red;
+                // padding: auto 0;
+
+                
+
+                .title-small {
+                    color: white;
+                }
+
+                .watch {
+                    background-color: #001489;
+                    display: inline-flex;
+                    border-radius: 999px;
+                    padding: 9px 17px;
+                    align-items: center;
+
+                    svg {
+                        height: 13px;
+                        width: 13px;
+                        margin-right: 5px;
+                    }
+                }
+
+                .circles {
+                    display: flex;
+                    align-items: center;
+                    gap: 13px;
+                    
+                    svg {
+                        width: 28px;
+                    }
+
+                    .star {
+                        fill: transparent;
+                        stroke: black;
+                        stroke-width: 1.3;
+
+                        &:hover {
+                            fill: #001489;
+                            stroke: white;
+
+                            path {
+                                fill: white;
+                            }
+                        }
+                    }
+
+                    .plus {
+
+                        circle {
+                            fill: transparent;
+                            stroke: black;
+                            stroke-width: 1;
+                        }
+
+                        path {
+                            stroke: black;
+                            stroke-width: 2;
+                            stroke-linecap: round;
+                        }
+
+                        &:hover {
+
+                            circle {
+                                fill: #001489;
+                            }
+
+                            path {
+                                fill: white;
+                                stroke: white;
+                                stroke-width: 2.5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
