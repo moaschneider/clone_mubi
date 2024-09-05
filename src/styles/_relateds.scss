@@ -1,5 +1,14 @@
+@import 'backgrounds';
+
 .related-movies {
-    height: 200vh;
+    
+    .gradient {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 50%;
+        background: linear-gradient( rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+        z-index: 0;
+    }
 
     &__header {
         margin-bottom: 20px;
@@ -10,37 +19,90 @@
         width: 100%;
         height: 270px;
         display: flex;
+        margin-bottom: 36px;
         
         .image {
             width: 50%;
             height: 100%;
-            background-image: url("https://images.mubicdn.net/images/film/38810/cache-47218-1672936667/image-w1280.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+            
+            
+            
+            &.melancolia {
+                background-image: $melancholia-bg;
+            }
+            
+            &.dancando-no-escuro {
+                background-image: $dancing-in-the-dark-bg;
+            }
+
+            &.anticristo {
+                background-image: $anticristo-bg;
+            }
+
+            &.ondas-do-destino {
+                background-image: $breaking-the-waves-bg;
+            }
+
+            &.os-idiotas {
+                background-image: $the-idiots-bg;
+            }
+
+            &.manderlay {
+                background-image: $manderlay-bg;
+            }
+
+            &.elemento-de-um-crime {
+                background-image: $element-of-a-crime-bg;
+            }
+
+            &.europa {
+                background-image: $europa-bg;
+            }
+
+            &.as-cinco-obstrucoes {
+                background-image: $five-obstructions-bg;
+            }
             
             .title {
                 font-size: 27px;
                 color: white;
                 padding-top: 20px;
                 padding-left: 20px;
+                z-index: 2;
+                position: relative;
             }
 
-            .title-small {
-                font-weight: normal;
-                font-size: 15px;
-                color: white;
-            }
-
-            .bold {
-                font-weight: bold;
+            .director-country-year {
                 padding-left: 20px;
+
+                .title-small {
+                    font-weight: normal;
+                    font-size: 15px;
+                    color: white;
+                    z-index: 2;
+                    position: relative;
+                }
+                
+                .bold {
+                    font-weight: bold;
+                    // padding-left: 20px;
+                    z-index: 2;
+                    position: relative;
+                }
             }
+            
         }
 
         .texts {
             width: 50%;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             .text-small {
                 font-size: 13px;
@@ -53,11 +115,7 @@
                 height: 38px;
                 display: flex;
                 align-items: center;
-                gap: 13px;
-                // border: 1px solid red;
-                // padding: auto 0;
-
-                
+                gap: 13px;                
 
                 .title-small {
                     color: white;
@@ -128,6 +186,28 @@
                             }
                         }
                     }
+                }
+            }
+
+            .specs {
+                display: flex;
+                opacity: 0.5;
+                
+                li {
+                    margin-right: 8px;
+                    display: flex;
+                    align-items: center;
+                    
+                    .text-small {
+                        display: inline;
+                        font-size: 13px;
+                        margin-bottom: 0;
+                    }
+                }
+                
+                svg {
+                    height: 12px;
+                    vertical-align: middle;
                 }
             }
         }
