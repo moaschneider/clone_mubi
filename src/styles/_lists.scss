@@ -1,20 +1,41 @@
 .lists {
+    height: 324px;
+    overflow-y: hidden;
+
+    @media (max-width: 809px) {
+        display: block;
+        
+        .margin {
+            max-width: 375px;
+            margin: 0 auto;
+            padding: 22px 20px 20px 20px;
+        }
+    }
 
     .text, .text-small {
         color: #666666;
     }
 
     &__header {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 36px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px 4px;
+
+        @media (max-width: 809px) {
+            row-gap: 20px;
+        }
 
         &__card {
             background-color: white;
+            width: 372px;
+
+            @media (max-width: 809px) {
+                width: 100%;
+            }
 
             &__images {
                 height: 138px;
@@ -32,10 +53,14 @@
                 
                 .side {
                     width: 33%;
-                    height: calc(50% - 1px);
+                    height: 138px;
                     gap: 2px;
                     display: flex;
                     flex-direction: column;
+                    
+                    img {
+                        height: calc(50% - 1px);
+                    }
                 }
             }
 

@@ -1,14 +1,28 @@
 .awards {
 
+    @media (max-width: 809px) {
+        
+        .margin {
+            max-width: 375px;
+            margin: 0 auto;
+            padding: 22px 22px 0 22px;
+        }
+    }
+
     &__title {
         padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
 
         .text-small {
             color: #001489;
             font-weight: bold;
-            font-style: 12px;
+            font-size: 14px;
+
+            @media (max-width: 809px) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -19,13 +33,20 @@
             flex-wrap: wrap;
             width: 100%;
 
+            @media (min-width: 1186px){
+                flex-wrap: nowrap;
+            }
+
             li {
                 width: 50%;
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 35px;
                 padding-right: 20px;
-                // border: 1px solid red;
+
+                @media (max-width: 809px) {
+                    width: 100%;
+                }
                 
                 .text {
                     font-size: 15px;

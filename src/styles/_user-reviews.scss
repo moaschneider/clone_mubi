@@ -1,4 +1,28 @@
 .user-reviews {
+    
+    @media (max-width: 809px) {
+        height: 1480px;
+        overflow-y: hidden;
+    }
+    
+    @media (min-width: 810px) {
+        height: 915px;
+        overflow-y: hidden;
+    }
+    
+    @media (min-width: 1186px) {
+        height: 695px;
+        overflow-y: hidden;
+    }
+
+    @media (max-width: 809px) {
+        
+        .margin {
+            max-width: 375px;
+            margin: 0 auto;
+            padding: 22px 20px 20px 20px;
+        }
+    }
 
     .text-small {
         color: #001489;
@@ -10,12 +34,20 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+
+        .title {
+            line-height: unset;
+        }
     }
 
     &__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 36px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px 4px;
+
+        @media (max-width: 809px) {
+            row-gap: 20px;
+        }
 
         .title {
             text-transform: none;
@@ -29,12 +61,12 @@
             color: #666666;
         }
         
-            
         &__card {
             background-color: white;
             padding: 20px;
-            width: 372px;
+            width: 370px;
             position: relative;
+            margin-right: 2px;
 
             img {
                 width: 40px;
@@ -63,7 +95,6 @@
 
             .text {
                 margin-bottom: 20px;
-                // border: 1px solid red;
             }
 
             .user-reviews-card-footer {

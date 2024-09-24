@@ -1,6 +1,16 @@
 .reviews {
     background-color: white;
 
+    @media (max-width: 809px) {
+        
+        .margin {
+            max-width: 375px;
+            margin: 0 auto;
+            padding: 22px 20px 20px 20px;
+
+        }
+    }
+
     &__title {
         margin-bottom: 30px;
     }
@@ -11,42 +21,88 @@
         width: 100%;
         padding-bottom: 20px;
 
+        @media (max-width: 809px) {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-width: 1186px) {
+            height: 249px;
+        }
+
+        @media (min-width: 1562px){
+            width: calc(50% - 16px);
+        }
+
         &__image {
             padding-right: 10px;
             height: 100%;
             width: 50%;
-            min-width: 364px;
-            min-height: 185px;
+            min-width: 360px;
+            // min-height: 185px;
+
+            @media (max-width: 809px) {
+                padding-right: 0;
+                width: 100%;
+                // height: 100%;
+                min-width: 100%;
+                // min-height: 100%;
+            }
+
+            @media (min-width: 1186px) {
+                width: 42%;
+            }
 
             img {
                 width: 100%;
                 height: 100%;
+                display: block;
             }
         }
 
         &__text {
-
             padding: 0 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            // border: 1px solid red;
+
+            @media (max-width: 809px){
+                padding: 0;
+                width: 100%;
+            }
+
+            @media (min-width: 1186px){
+                width: 58%;
+            }
 
             .title {
                 text-transform: none;
                 color: #323232;
                 padding: 7px 0;
                 font-size: 20px;
+
+                @media (min-width: 1186px) {
+                    font-size: 24px;
+                }
             }
 
             .text {
                 color: #666666;
                 font-size: 14px;
+
+                @media (min-width: 1186px) {
+                    font-size: 16px;
+                }
             }
 
             &__below {
                 display: flex;
                 justify-content: space-between;
+
+                @media (max-width: 809px) {
+                    padding-top: 10px;
+                }
 
                 &__authorship {
                     display: flex;
@@ -54,7 +110,7 @@
                     padding-bottom: 10px;
     
                     .text-small {
-                        color: black;
+                        color: #001489;
                         font-weight: bold;
                         margin-right: 2px;
                     }
@@ -112,25 +168,41 @@
             &__title {
                 display: flex;
                 align-items: flex-end;
+
+
+                @media (max-width: 809px) {
+                    display: block;
+
+                    .title {
+                        margin-bottom: 20px;
+                    }
+                }
                 
                 &__stars {
                     margin-left: 15px;    
                     display: flex;
+
+                    @media (max-width: 809px) {
+                        margin-left: 0;
+                    }
                 }
             }
             
             .text-small {
                 color: #001489;
                 font-weight: bold;
-                font-style: 12px;
+                font-size: 12px;
             }
         }
         
         &__cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 30px;
-            // border: 1px solid red;
+
+            @media (max-width: 809px) {
+                display: block;
+            }
 
             .text {
                 font-family: Georgia, 'Times New Roman', Times, serif;
@@ -140,6 +212,21 @@
             }
 
             &__card {
+                width: calc(50% - 15px);
+
+                @media (max-width: 809px) {
+                    width: 100%;
+                    padding: 10px 0;
+                    margin-bottom: 30px;
+                }
+
+                @media (min-width: 1186px){
+                    width: calc(33% - 30px);
+                }
+
+                @media (min-width: 1186px){
+                    width: calc(33% - 30px);
+                }
 
                 img {
                     display: block;

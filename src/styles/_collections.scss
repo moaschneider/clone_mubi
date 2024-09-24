@@ -1,4 +1,12 @@
 .collections {
+
+    @media (max-width: 809px) {
+        .margin {
+            max-width: 375px;
+            margin: 0 auto;
+            padding: 22px 22px 0 22px;
+        }
+    }
     
     &__title {
         margin-bottom: 20px;
@@ -7,6 +15,10 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
+
+        @media (max-width: 809px) {
+            display: block;
+        }
         
         &__item {
             margin-right: 6px;
@@ -15,6 +27,10 @@
             height: 78px;
             display: flex;
             background-color: white;
+
+            @media (max-width: 809px) {
+                width: 100%;
+            }
             
             &__image {
                 img {
